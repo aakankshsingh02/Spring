@@ -9,9 +9,11 @@ public class HelloSpringApp {
 		ClassPathXmlApplicationContext context= 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
         coach theCoach= context.getBean("myCoach", coach.class);
-        coach theCoach1= context.getBean("ourCoach", coach.class);
+      
         System.out.println(theCoach.getDailyWorkout());
-        System.out.println(theCoach1.getDailyWorkout());
+       
+        
+        System.out.println(theCoach.getHappy());
         context.close(); 
 	}
 

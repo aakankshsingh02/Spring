@@ -7,11 +7,25 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+ 
+   
+   
     <!-- Define your beans here -->
    <bean id="myCoach"
-   class="Springfirst.TrackCoach"></bean>
-   <bean id="ourCoach"
-   class="Springfirst.BaseballCoach"></bean>
+   class="Springfirst.TrackCoach">
+    <constructor-arg ref="happy"/>
+   </bean>
+   
+  
+   <!-- BEAN DI -->
+
+ <bean id="happy"
+   class="Springfirst.HappyEx">
+   </bean>
+  
+   
+  
+   
    
     
 </beans>
